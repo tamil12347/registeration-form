@@ -1,0 +1,37 @@
+<html>  
+<head>  
+<title> Registration Page</title>  
+</head>  
+<body align="center" >  
+<h1> REGISTRATION FORM</h1>  
+<form method="POST" action ='https://script.google.com/macros/s/AKfycbziqw4dC-IEcHY0_9XNUiuOcETb-R8Itx0OnLHD-M_WTNfWRX9OEgWmOEbS-mD4-RyWdw/exec' >
+<table cellspacing="4" align="center" cellpadding="8" border="0">  
+<tr><td> E-MAIL</td>   
+<td><input type="text" placeholder="" name="E-mail" id="b1" required></td></tr>  
+<tr><td> CHILDREN COUNT</td>   
+<td><input type="text" placeholder="17 AND BELOW" name="Child count" id="c1" required></td></tr>  
+<tr><td>ADULT COUNT </td>  
+<td><input type="text" placeholder="ABOVE 17" name="Adult count" id="a1" required></td></tr>  
+<tr><td>  
+<input type="button" onClick="calculate()" name="Amount" value="AMOUNT" id="e1">    
+<input type="button" onClick="submit()" value="SUBMIT"> </td></tr>
+<span id="sub"></span>
+<tr><td>  
+<button onClick="window.print()">Print this page</button> 
+<p>TOTAL AMOUNT IS : <br>
+<span id="result"></span>
+</table>
+</form>
+<script type="text/javascript">  
+function calculate(){
+var b=document.getElementById("b1").value;   
+var c=document.getElementById("c1").value;  
+var a=document.getElementById("a1").value;    
+document.getElementById("result").innerHTML =((c*50)+(a*100));
+}  
+function submit(){
+ document.getElementById("sub").innerHTML ="REGISTRATION DONE!";
+        }
+</script>  
+</body>  
+</html>
